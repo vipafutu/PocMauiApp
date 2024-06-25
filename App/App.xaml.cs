@@ -1,5 +1,4 @@
-﻿using PocMauiApp.Pages;
-using PocMauiApp.Pages.HomePage;
+﻿using PocMauiApp.Pages.LoginPage;
 using PocMauiApp.Services;
 
 namespace PocMauiApp;

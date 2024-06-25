@@ -6,10 +6,12 @@ PocMauiApp is a basic app written in .NET MAUI, inspired by a Udemy course but w
 
 This project is based on the Udemy course: [Build Real World ECommerce App with .NET MAUI](https://www.udemy.com/course/build-real-world-ecommerce-app-with-net-maui/). The original code has been heavily modified.
 
-The course has some limitations, including poorly written C# code and a lack of the MVVM (Model-View-ViewModel) pattern, which is a important feature of the XAML development. Therefore, I do not recommend this course for those looking to learn best practices in .NET MAUI development.
+The course has some limitations, including poorly written C# code and a lack of the MVVM (Model-View-ViewModel) pattern, which is a important feature of the XAML development. Dependency Injection was not used at all etc..
+Therefore, I do not recommend this course for those looking to learn best practices in .NET MAUI development.
 
 ## Features Tested
 
+- Dependency Injections
 - Push Notifications
   - Implemented using the OneSignal service.
 - Map Integration

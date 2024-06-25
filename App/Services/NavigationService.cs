@@ -3,6 +3,7 @@ namespace PocMauiApp.Services;
 using PocMauiApp.Entities;
 using PocMauiApp.Pages;
 using PocMauiApp.Pages.HomePage;
+using PocMauiApp.Pages.LoginPage;
 using PocMauiApp.Pages.ProductDetailsPage;
 using PocMauiApp.Pages.ProductListPage;
 

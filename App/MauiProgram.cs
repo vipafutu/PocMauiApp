@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
-using Microsoft.Maui.Controls.Hosting;
 using PocMauiApp.Pages;
 using PocMauiApp.Pages.CartPage;
 using PocMauiApp.Pages.HomePage;
+using PocMauiApp.Pages.LoginPage;
 using PocMauiApp.Pages.ProductDetailsPage;
 using PocMauiApp.Pages.ProductListPage;
 using PocMauiApp.Pages.ProfilePage;
@@ -35,6 +35,7 @@ public static class MauiProgram
 		
 		builder.Services.AddTransient<SignupPage>();
 		builder.Services.AddTransient<LoginPage>();
+		builder.Services.AddTransient<LoginPageViewModel>();
 		builder.Services.AddTransient<AppShell>();
 		builder.Services.AddTransient<CartPage>();
 		builder.Services.AddTransient<CartPageViewModel>();
