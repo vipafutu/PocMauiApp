@@ -17,6 +17,7 @@ Therefore, I do not recommend this course for those looking to learn best practi
 - Map Integration
 - Basic XAML Pages with MVVM Pattern
 - Location Services and Map Integration
+- Unit tests
 
 ## Getting Started
 
