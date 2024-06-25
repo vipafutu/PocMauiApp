@@ -1,0 +1,37 @@
+<ContentPage
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:maps="http://schemas.microsoft.com/dotnet/2021/maui/maps"
+  xmlns:sensors="clr-namespace:Microsoft.Maui.Devices.Sensors;assembly=Microsoft.Maui.Essentials"
+  x:Class="PocMauiApp.Pages.ProfilePage.ProfilePage"
+  xmlns:vm="clr-namespace:PocMauiApp.Pages.ProfilePage"
+  Title="ProfilePage">
+
+  <ContentPage.BindingContext>
+    <vm:ProfilePageViewModel/>
+  </ContentPage.BindingContext>
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <HorizontalStackLayout Grid.Row="0"
+                         Spacing="5"
+                         Padding="10">
+      <Label Text="Username"
+             FontSize="Subtitle"/>
+      <Label Text="{Binding Username}"
+             FontSize="Large"/>
+    </HorizontalStackLayout>
+
+    <maps:Map Grid.Row="1"
+              x:Name="map"
+              IsShowingUser="True"
+              MapType="Satellite"
+              VerticalOptions="FillAndExpand"
+              HorizontalOptions="FillAndExpand">
+    </maps:Map>
+  </Grid>
+</ContentPage>

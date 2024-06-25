@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PocMauiApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PocMauiApp"
+    xmlns:pages="clr-namespace:PocMauiApp.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.TabBarBackgroundColor="GreenYellow"
+    Shell.TabBarTitleColor="Black"
+    Shell.TabBarUnselectedColor="Blue"
+    Title="PocMauiApp">
+
+    <TabBar>
+        <Tab Title="Home" Icon="home">
+            <ShellContent ContentTemplate="{DataTemplate pages:HomePage.HomePage}"></ShellContent>
+        </Tab>
+        <Tab Title="Cart" Icon="cart">
+            <ShellContent ContentTemplate="{DataTemplate pages:CartPage.CartPage}"></ShellContent>
+        </Tab>
+        <Tab Title="Profile" Icon="profile">
+            <ShellContent ContentTemplate="{DataTemplate pages:ProfilePage.ProfilePage}"></ShellContent>
+        </Tab>
+    </TabBar>
+
+</Shell>

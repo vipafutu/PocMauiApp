@@ -1,0 +1,89 @@
+<ContentPage
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:vm="clr-namespace:PocMauiApp.Pages.HomePage"
+  x:Class="PocMauiApp.Pages.HomePage.HomePage">
+
+  <ContentPage.BindingContext>
+    <vm:HomePageViewModel/>
+  </ContentPage.BindingContext>
+
+  <Grid RowDefinitions="Auto,Auto,Auto"
+        RowSpacing="20"
+        Margin="20">
+
+    <VerticalStackLayout Grid.Row="0"
+                         Spacing="5">
+      <Label Text="{Binding Username}"
+             FontSize="Large"/>
+      <Label Text="Start your day with a cup of joy!"
+             FontSize="Subtitle"/>
+    </VerticalStackLayout>
+
+    <VerticalStackLayout Grid.Row="1" Spacing="5">
+      <Label Text="Categories"
+             FontSize="Large"/>
+      <CollectionView ItemsSource="{Binding Categories}"
+                      SelectedItem="{Binding SelectedCategory, Mode=TwoWay}"
+                      SelectionMode="Single"
+                      HeightRequest="120">
+        <CollectionView.ItemsLayout>
+          <LinearItemsLayout ItemSpacing="30"
+                             Orientation="Horizontal"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+          <DataTemplate>
+            <VerticalStackLayout>
+              <Border StrokeShape="RoundRectangle 10">
+                <Image HeightRequest="90"
+                       WidthRequest="90"
+                       Source="{Binding ImageUrl}"/>
+              </Border>
+              <Label HorizontalOptions="Center"
+                     FontSize="Small"
+                     Text="{Binding Name}"/>
+            </VerticalStackLayout>
+          </DataTemplate>
+        </CollectionView.ItemTemplate>
+      </CollectionView>
+    </VerticalStackLayout>
+
+    <VerticalStackLayout Grid.Row="2" Spacing="5">
+      <Label Text="Trending"
+             FontSize="Large"
+             VerticalOptions="Center"/>
+      <CollectionView x:Name="TrendingProducts"
+                      ItemsSource="{Binding TrendingProducts}"
+                      SelectionMode="Single"
+                      HeightRequest="220">
+        <CollectionView.ItemsLayout>
+          <LinearItemsLayout Orientation="Horizontal"
+                             ItemSpacing="10"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+          <DataTemplate>
+            <Border VerticalOptions="Start"
+                    StrokeShape="RoundRectangle 10,10,10,10"
+                    Padding="10">
+              <VerticalStackLayout>
+                <Border VerticalOptions="Start"
+                        StrokeShape="RoundRectangle 10,10,10,10">
+                  <!-- Product Image -->
+                  <Image Aspect="AspectFill"
+                         HeightRequest="140"
+                         Source="{Binding ImageUrl}"
+                         WidthRequest="140"/>
+                </Border>
+                <!-- Product Name -->
+                <Label FontAttributes="Bold"
+                       LineBreakMode="WordWrap"
+                       Text="{Binding Name}"
+                       MaxLines="2"/>
+              </VerticalStackLayout>
+            </Border>
+          </DataTemplate>
+        </CollectionView.ItemTemplate>
+      </CollectionView>
+    </VerticalStackLayout>
+  </Grid>
+</ContentPage>

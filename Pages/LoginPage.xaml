@@ -1,0 +1,47 @@
+<ContentPage
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="PocMauiApp.Pages.LoginPage"
+  NavigationPage.HasNavigationBar="True"
+  Title="Login">
+  <Grid RowDefinitions="Auto,Auto,Auto,Auto,*"
+        RowSpacing="20"
+        Margin="20,150,20,40">
+    <Image Grid.Row="0"
+           Source="storelogo.png"
+           Aspect="AspectFit"
+           HeightRequest="100"
+           WidthRequest="100"/>
+    <Label Grid.Row="1"
+           Text="Welcome back, you have been missed"
+           HorizontalOptions="Center"/>
+    <Frame Grid.Row="2"
+           Padding="15"
+           BackgroundColor="White">
+      <VerticalStackLayout>
+        <Entry Placeholder="Usernamel"
+               x:Name="Username"/>
+
+        <Entry Placeholder="Password"
+               IsPassword="True"
+               x:Name="Password"/>
+      </VerticalStackLayout>
+    </Frame>
+
+    <Button Grid.Row="3"
+            Text="Login"
+            x:Name="LoginButton"
+            Clicked="OnLoginButtonClicked"/>
+    <HorizontalStackLayout Grid.Row="4"
+                           Spacing="2"
+                           HorizontalOptions="Center"
+                           VerticalOptions="EndAndExpand">
+      <Label Text="Not a member?"/>
+      <Label Text="Register now">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer x:Name="TapRegister" Tapped="OnTapRegisterTapped"/>
+        </Label.GestureRecognizers>
+      </Label>
+    </HorizontalStackLayout>
+  </Grid>
+</ContentPage>
