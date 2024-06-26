@@ -18,6 +18,8 @@ Therefore, I do not recommend this course for those looking to learn best practi
 - Basic XAML Pages with MVVM Pattern
 - Location Services and Map Integration
 - Unit tests
+- Creating UI without xaml-file.
+  - See App/Pages/SignupPage.cs
 
 ## Getting Started
 
